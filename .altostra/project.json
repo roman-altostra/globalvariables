@@ -1,0 +1,57 @@
+{
+	"id": "globalvariables",
+	"name": "globalvariables",
+	"type": "altostra",
+	"description": "An empty project template",
+	"created": "2022-07-17T09:28:58.884Z",
+	"blueprints": [
+		{
+			"version": "2019-10-24",
+			"connections": {},
+			"resources": {
+				"Test01": {
+					"type": "resource.compute.function",
+					"name": "test",
+					"memory": 512,
+					"timeout": 6,
+					"runtime": "nodejs12.x",
+					"packageType": "zip",
+					"entryPoint": "functions/test.handler",
+					"layers": [],
+					"environment": {
+						"variables": {
+							"globalCheckReplacement": "fromlocal"
+						}
+					},
+					"id": "Test01"
+				}
+			},
+			"metadata": {
+				"designer": {
+					"resourcePositions": {
+						"Test01": {
+							"x": 340.8385009765625,
+							"y": 231.25909423828125,
+							"z": 0
+						}
+					}
+				}
+			},
+			"id": "globalvariables",
+			"name": "globalvariables",
+			"unsafe": false,
+			"parameters": {
+				"ALTO_REGION": {
+					"paths": [
+						"globalEnvironmentVariables/globalsparam"
+					]
+				}
+			},
+			"globalEnvironmentVariables": {
+				"globalCheckReplacement": "fromglobal",
+				"globallocal": "works",
+				"globalsparam": ""
+			}
+		}
+	]
+}
